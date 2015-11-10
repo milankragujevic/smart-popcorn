@@ -42,9 +42,9 @@
             });
     }
 
-    var baseUrl = 'http://api.ysubs.com/subs/';
-    var prefix = 'http://www.ysubs.com';
-    var cacheNamespace = 'ysubs';
+    var baseUrl = 'http://api.yifysubtitles.com/subs/';
+    var prefix = 'http://www.yifysubtitles.com';
+    var cacheNamespace = 'yifysubtitles';
 
     var TTL = 1000 * 60 * 60 * 4; // 4 hours
 
