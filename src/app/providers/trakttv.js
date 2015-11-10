@@ -35,8 +35,8 @@ define(['jquery'],
 				});
 		}
 
-		var API_ENDPOINT = window.URI('http://api.trakt.tv/'),
-			MOVIE_PATH = 'movie',
+		var API_ENDPOINT = window.URI('https://api-v2launch.trakt.tv/'),
+			MOVIE_PATH = 'movies',
 			API_KEY = '7b7b93f7f00f8e4b488dcb3c5baa81e1619bb074';
 
 		function MovieCollection(imdbIDs) {
@@ -53,10 +53,10 @@ define(['jquery'],
 			var uri = API_ENDPOINT.clone()
 						.segment([
 							MOVIE_PATH,
-							'summaries.json',
-							API_KEY,
+							// 'summaries.json',
+							// API_KEY,
 							this.ids.sort().join(','),
-							'full'
+							'extended=full'
 						]);
 
 			console.debug('Requesting from Trakt.tv: %s', uri.toString());
